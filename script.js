@@ -1,0 +1,124 @@
+(function () {
+    "use strict";
+
+    /* ------------------------------------------------------------
+       Config — edit this number to your real WhatsApp business line
+    ------------------------------------------------------------ */
+    var WHATSAPP_NUMBER = "91XXXXXXXXXX"; // replace with real number, digits only, country code first
+    var WHATSAPP_MESSAGE = "Hi! I'm interested in launching a gaming platform with Golden Stake. Please share more details.";
+
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    /* ------------------------------------------------------------
+       WhatsApp CTA wiring
+    ------------------------------------------------------------ */
+    function openWhatsApp(e) {
+        if (e) e.preventDefault();
+        var url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(WHATSAPP_MESSAGE);
+        window.open(url, "_blank", "noopener");
+    }
+    document.querySelectorAll(".js-whatsapp").forEach(function (el) {
+        el.addEventListener("click", openWhatsApp);
+    });
+
+    /* ------------------------------------------------------------
+       Falling coin field (ambient ¦ skipped if reduced motion)
+    ------------------------------------------------------------ */
+    function spawnCoins(container, count, intervalMs) {
+        if (!container || reduceMotion) return;
+
+        function makeCoin() {
+            var coin = document.createElement("div");
+            coin.className = "coin";
+            var left = Math.random() * 100;
+            var size = 10 + Math.random() * 14;
+            var duration = 7 + Math.random() * 6;
+            var spinDuration = 1.5 + Math.random() * 2;
+            var delay = Math.random() * 2;
+
+            coin.style.left = left + "%";
+            coin.style.width = size + "px";
+            coin.style.height = size + "px";
+            coin.style.animationDuration = duration + "s, " + spinDuration + "s";
+            coin.style.animationDelay = delay + "s, 0s";
+
+            container.appendChild(coin);
+
+            window.setTimeout(function () {
+                coin.remove();
+            }, (duration + delay) * 1000 + 200);
+        }
+
+        for (var i = 0; i < count; i++) {
+            window.setTimeout(makeCoin, i * (intervalMs / count));
+        }
+        window.setInterval(makeCoin, intervalMs / count);
+    }
+
+    spawnCoins(document.getElementById("coin-field"), 6, 2600);
+
+    var ctaCoinField = document.querySelector(".cta-coins");
+    if (ctaCoinField) spawnCoins(ctaCoinField, 5, 2400);
+
+    /* ------------------------------------------------------------
+       Sparkle field
+    ------------------------------------------------------------ */
+    function spawnSparkles(container, count) {
+        if (!container || reduceMotion) return;
+        for (var i = 0; i < count; i++) {
+            var s = document.createElement("div");
+            s.className = "spark";
+            s.style.left = Math.random() * 100 + "%";
+            s.style.top = Math.random() * 100 + "%";
+            s.style.animationDuration = 2 + Math.random() * 3 + "s";
+            s.style.animationDelay = Math.random() * 3 + "s";
+            container.appendChild(s);
+        }
+    }
+    spawnSparkles(document.getElementById("sparkle-field"), 40);
+
+    /* ------------------------------------------------------------
+       Scroll reveal
+    ------------------------------------------------------------ */
+    var revealEls = document.querySelectorAll("[data-reveal]");
+    if ("IntersectionObserver" in window && !reduceMotion) {
+        var io = new IntersectionObserver(
+            function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("in-view");
+                        io.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.15 }
+        );
+        revealEls.forEach(function (el) {
+            io.observe(el);
+        });
+    } else {
+        revealEls.forEach(function (el) {
+            el.classList.add("in-view");
+        });
+    }
+
+    /* ------------------------------------------------------------
+       FAQ Accordion
+    ------------------------------------------------------------ */
+    document.querySelectorAll('.faq-question').forEach(function(button) {
+        button.addEventListener('click', function() {
+            var item = button.parentElement;
+            
+            // Close other items
+            document.querySelectorAll('.faq-item').forEach(function(otherItem) {
+                if(otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            item.classList.toggle('active');
+        });
+    });
+
+})();
