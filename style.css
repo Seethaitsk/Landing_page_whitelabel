@@ -436,12 +436,7 @@ ul {
 }
 
 .hero-grid {
-  max-width: 1220px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 40px;
-  align-items: center;
   width: 100%;
 }
 
