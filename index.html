@@ -70,7 +70,7 @@
 
             <!-- Background Image perfectly blended into the right side -->
             <div class="hero-bg-banner hero-fade-in-seq">
-                <img src="images/banner.png" alt=""
+                <img src="images/banner2.png" alt=""
                     style="width: 100%; height: 100%; object-fit: cover; object-position: center right;">
             </div>
 
@@ -78,7 +78,7 @@
             <div class="hero-grid" style="position: relative; z-index: 2;">
                 <div class="hero-left hero-fade-in-seq">
                     <p class="eyebrow"
-                        style="text-align: left; margin-bottom: 16px; color: var(--gold-soft); letter-spacing: 0.1em; font-size: 0.65rem; display: inline-block; background: rgba(255, 215, 0, 0.08); border: 1px solid rgba(255, 215, 0, 0.2); padding: 6px 16px; border-radius: 100px; backdrop-filter: blur(4px); box-shadow: 0 4px 15px rgba(255, 215, 0, 0.05);">
+                        style="text-align: left; margin-bottom: 16px; color: #FFD700; letter-spacing: 0.08em; font-size: 0.75rem; display: inline-block; background: rgba(255, 215, 0, 0.1); border: 1px solid rgba(255, 215, 0, 0.35); padding: 8px 20px; border-radius: 100px; backdrop-filter: blur(4px); box-shadow: 0 4px 15px rgba(255, 215, 0, 0.1); white-space: nowrap;">
                         YOUR GAMING BUSINESS STARTS HERE! YOUR BRAND. YOUR PLAYERS. YOUR PROFITS.</p>
                     <div class="hero-title-v2" style="margin-bottom: 24px; align-items: flex-start;">
                         <span class="ht-gold-lg"
@@ -95,20 +95,46 @@
                         integrations, hosting, and support so you can focus on growing your business.
                     </p>
 
-                    <div class="hero-stats" style="justify-content: flex-start; gap: 40px; margin-bottom: 40px;">
-                        <div class="hero-stat stat-anim" style="align-items: flex-start; animation-delay: 0.2s;">
-                            <span class="hero-stat-num" style="font-size: 1.1rem;">N$15,000</span>
-                            <span class="hero-stat-label" style="font-size: 0.55rem;">ONE-TIME SETUP</span>
+                    <div class="hero-stats-premium" data-reveal>
+                        <div class="hero-stat-card stat-anim" style="animation-delay: 0.2s;">
+                            <div class="stat-icon-wrapper">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#svgGold)"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <span class="hero-stat-num">N$15,000</span>
+                                <span class="hero-stat-label">ONE-TIME SETUP</span>
+                            </div>
                         </div>
-                        <div class="hero-stat-divider" aria-hidden="true" style="height: 24px;"></div>
-                        <div class="hero-stat stat-anim" style="align-items: flex-start; animation-delay: 0.4s;">
-                            <span class="hero-stat-num" style="font-size: 1.1rem;">N$0</span>
-                            <span class="hero-stat-label" style="font-size: 0.55rem;">MONTHLY MAINTENANCE</span>
+
+                        <div class="hero-stat-card stat-anim" style="animation-delay: 0.4s;">
+                            <div class="stat-icon-wrapper">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#svgGold)"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="5" width="20" height="14" rx="2" ry="2" />
+                                    <path d="M16 12h.01M2 10h20" />
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <span class="hero-stat-num">N$0</span>
+                                <span class="hero-stat-label">MONTHLY MAINT.</span>
+                            </div>
                         </div>
-                        <div class="hero-stat-divider" aria-hidden="true" style="height: 24px;"></div>
-                        <div class="hero-stat stat-anim" style="align-items: flex-start; animation-delay: 0.6s;">
-                            <span class="hero-stat-num" style="font-size: 1.1rem;">20%</span>
-                            <span class="hero-stat-label" style="font-size: 0.55rem;">REVENUE SHARE (GGR)</span>
+
+                        <div class="hero-stat-card stat-anim" style="animation-delay: 0.6s;">
+                            <div class="stat-icon-wrapper">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#svgGold)"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                                    <polyline points="16 7 22 7 22 13" />
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <span class="hero-stat-num">20%</span>
+                                <span class="hero-stat-label">REV SHARE (GGR)</span>
+                            </div>
                         </div>
                     </div>
 
@@ -134,11 +160,14 @@
                     buying servers, or integrating games individually. With our turnkey solution, you receive:</p>
 
                 <div class="turnkey-modules-grid" data-reveal>
-                    
+
                     <!-- Module 1: Gaming & Entertainment -->
                     <div class="tk-module-card">
                         <div class="tk-icon-wrapper">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#svgGold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#svgGold)"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
                         </div>
                         <h3 class="tk-title">Gaming Suite</h3>
                         <ul class="tk-list">
@@ -152,7 +181,11 @@
                     <!-- Module 2: Tech & Platform -->
                     <div class="tk-module-card">
                         <div class="tk-icon-wrapper">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#svgGold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#svgGold)"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg>
                         </div>
                         <h3 class="tk-title">Core Platform</h3>
                         <ul class="tk-list">
@@ -166,7 +199,11 @@
                     <!-- Module 3: Payments & Operations -->
                     <div class="tk-module-card">
                         <div class="tk-icon-wrapper">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#svgGold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#svgGold)"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="1" x2="12" y2="23" />
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                            </svg>
                         </div>
                         <h3 class="tk-title">Finance & Ops</h3>
                         <ul class="tk-list">
@@ -361,9 +398,7 @@
                 <p class="eyebrow eyebrow-center">Your success starts here.</p>
                 <h2 class="section-title center">Why Businesses Choose Us</h2>
 
-                <div class="why-split-grid"
-                    style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; align-items: stretch;"
-                    data-reveal>
+                <div class="why-split-grid" data-reveal>
                     <div class="why-image-wrapper"
                         style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.6); border: 1px solid rgba(255,215,0,0.2);">
                         <img src="images/why-choose-us.png" alt="Luxury Casino Briefcase"
@@ -453,9 +488,7 @@
         <!-- ============ PERFECT FOR ============ -->
         <section class="section rewards" id="perfect-for">
             <div class="section-inner">
-                <div class="perfect-split-grid"
-                    style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 80px; align-items: center;"
-                    data-reveal>
+                <div class="perfect-split-grid" data-reveal>
                     <div class="perfect-left">
                         <p class="eyebrow"
                             style="text-align: left; margin-bottom: 16px; color: var(--gold-soft); letter-spacing: 0.1em; font-size: 0.75rem;">
@@ -657,31 +690,83 @@
         <!-- ============ FINAL CTA ============ -->
         <section class="section cta-final" id="cta-final">
             <div class="coin-field cta-coins" aria-hidden="true"></div>
+
+            <!-- Decorative floating orbs -->
+            <div class="cta-orb cta-orb-1" aria-hidden="true"></div>
+            <div class="cta-orb cta-orb-2" aria-hidden="true"></div>
+
             <div class="section-inner cta-final-inner">
-                <h2 class="cta-title">Ready to Become an Online Gaming Operator?</h2>
-                <p class="cta-sub">Speak with our experts today and discover how quickly you can launch your own gaming
-                    platform.</p>
 
-                <div class="vault-grid"
-                    style="text-align: left; max-width: 600px; margin: 0 auto 40px; padding: 24px; background: transparent; border: none; gap: 0;"
-                    data-reveal>
-                    <ul class="vault-list">
-                        <li>Fast Setup</li>
-                        <li>Secure Infrastructure</li>
-                    </ul>
-                    <ul class="vault-list">
-                        <li>Complete Business Solution</li>
-                        <li>Ongoing Technical Support</li>
-                    </ul>
-                </div>
+                <!-- Premium CTA Card -->
+                <div class="cta-premium-card" data-reveal>
+                    <div class="cta-card-glow" aria-hidden="true"></div>
 
-                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px;">
-                    <a href="#" class="btn btn-gold btn-xl js-whatsapp">
-                        <span>👉 Get Your Free Consultation Now</span>
+                    <div class="cta-badge-row">
+                        <span class="cta-badge">🎰 LIMITED SLOTS</span>
+                    </div>
+
+                    <h2 class="cta-title">Ready to Become an Online Gaming Operator?</h2>
+                    <p class="cta-sub">Speak with our experts today and discover how quickly you can launch your own
+                        gaming
+                        platform.</p>
+
+                    <div class="cta-features-row">
+                        <div class="cta-feature-chip">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Fast Setup</span>
+                        </div>
+                        <div class="cta-feature-chip">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Secure Infrastructure</span>
+                        </div>
+                        <div class="cta-feature-chip">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Complete Business Solution</span>
+                        </div>
+                        <div class="cta-feature-chip">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Ongoing Technical Support</span>
+                        </div>
+                    </div>
+
+                    <div class="cta-pricing-row">
+                        <div class="cta-price-item">
+                            <span class="cta-price-value text-gold-gradient">N$15,000</span>
+                            <span class="cta-price-label">ONE-TIME SETUP</span>
+                        </div>
+                        <div class="cta-price-divider"></div>
+                        <div class="cta-price-item">
+                            <span class="cta-price-value text-gold-gradient">N$0</span>
+                            <span class="cta-price-label">MONTHLY FEE</span>
+                        </div>
+                        <div class="cta-price-divider"></div>
+                        <div class="cta-price-item">
+                            <span class="cta-price-value text-gold-gradient">20%</span>
+                            <span class="cta-price-label">REVENUE SHARE</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn premium-cta-btn btn-xl js-whatsapp" style="margin-top: 10px;">
+                        <span style="position: relative; z-index: 2; font-weight: 800;">👉 Get Your Free Consultation
+                            Now</span>
+                        <div class="cta-shine"></div>
                     </a>
+
+                    <p class="hero-microcopy" style="margin-top: 24px;">Limited Onboarding Slots Available · No Hidden
+                        Costs</p>
                 </div>
-                <p class="hero-microcopy">Limited Onboarding Slots Available · One-Time Setup N$15,000 · Monthly
-                    Maintenance N$0</p>
             </div>
         </section>
 
@@ -709,6 +794,15 @@
                 licensing.</p>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="#" class="floating-whatsapp js-whatsapp" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" width="32" height="32" fill="#fff">
+            <path
+                d="M16.004 0C7.163 0 .004 7.158.004 15.997c0 2.822.737 5.577 2.137 8.003L.003 32l8.204-2.113A15.94 15.94 0 0 0 16.004 32C24.843 32 32 24.838 32 15.997 32 7.158 24.843 0 16.004 0zm0 29.395a13.36 13.36 0 0 1-7.237-2.108l-.519-.308-4.866 1.253 1.298-4.729-.338-.537a13.32 13.32 0 0 1-2.05-7.169c0-7.39 6.014-13.4 13.408-13.4 7.396 0 13.41 6.01 13.41 13.4 0 7.392-6.014 13.398-13.41 13.398h-.696zm7.358-10.033c-.404-.202-2.39-1.178-2.76-1.313-.37-.135-.64-.202-.91.202-.27.405-1.045 1.313-1.282 1.583-.236.27-.472.304-.876.101-.404-.202-1.706-.629-3.25-2.005-1.202-1.071-2.013-2.393-2.25-2.797-.235-.405-.025-.624.177-.826.182-.181.404-.472.607-.708.202-.236.27-.405.404-.674.135-.27.068-.506-.034-.708-.101-.202-.91-2.194-1.248-3.003-.328-.789-.661-.682-.91-.695-.236-.012-.505-.014-.775-.014-.27 0-.708.101-1.079.506-.37.405-1.416 1.382-1.416 3.37 0 1.988 1.45 3.908 1.653 4.178.202.27 2.853 4.354 6.913 6.107.966.417 1.72.666 2.308.852.97.308 1.852.265 2.55.16.778-.115 2.39-.977 2.728-1.92.337-.943.337-1.752.236-1.92-.101-.169-.37-.27-.775-.472z" />
+        </svg>
+        <span class="wa-tooltip">Chat with us</span>
+    </a>
 
     <script src="script.js"></script>
 </body>
