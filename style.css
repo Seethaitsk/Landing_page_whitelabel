@@ -2373,6 +2373,143 @@ ul {
 }
 
 /* ============================================================
+   Premium Crown for "L" in LAUNCH
+============================================================ */
+.l-letter-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.premium-crown-container {
+  position: absolute;
+  top: -0.6em; 
+  left: -0.1em; 
+  width: 0.95em; 
+  z-index: 10;
+  pointer-events: none;
+  animation: crown-float-premium 4s ease-in-out infinite;
+}
+
+.premium-crown-img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.6)) drop-shadow(0 0 15px rgba(255,215,0,0.4));
+  animation: crown-pulse-glow 4s ease-in-out infinite;
+}
+
+.crown-rays {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 160%;
+  height: 160%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255,215,0,0.25) 0%, transparent 60%);
+  z-index: 1;
+  animation: crown-rays-pulse 4s ease-in-out infinite;
+}
+
+.crown-flare {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 35px;
+  height: 35px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,215,0,0.5) 20%, transparent 70%);
+  z-index: 3;
+  mix-blend-mode: screen;
+  animation: flare-flicker 3s ease-in-out infinite;
+}
+
+.crown-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.7), transparent);
+  transform: skewX(-20deg);
+  z-index: 3;
+  animation: crown-sweep-shine 5s linear infinite;
+}
+
+.crown-sparkles {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 4;
+}
+
+.crown-sparkles::before, .crown-sparkles::after {
+  content: '';
+  position: absolute;
+  width: 3px; height: 3px;
+  background: #FFF;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 2px #FFD700;
+  animation: sparkle-blink 2s ease-in-out infinite;
+}
+
+.crown-sparkles::before {
+  top: 15%; left: 15%;
+  animation-delay: 0.3s;
+}
+
+.crown-sparkles::after {
+  top: 35%; right: 10%;
+  animation-delay: 1.1s;
+}
+
+@keyframes crown-float-premium {
+  0%, 100% { transform: translateY(0) rotate(-12deg); }
+  50% { transform: translateY(-4px) rotate(-9deg); }
+}
+
+@keyframes crown-pulse-glow {
+  0%, 100% { filter: drop-shadow(0 6px 10px rgba(0,0,0,0.6)) drop-shadow(0 0 10px rgba(255,215,0,0.3)); }
+  50% { filter: drop-shadow(0 10px 16px rgba(0,0,0,0.7)) drop-shadow(0 0 22px rgba(255,215,0,0.6)); }
+}
+
+@keyframes crown-rays-pulse {
+  0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(0.9); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+@keyframes flare-flicker {
+  0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(0.8); }
+  50% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.2); }
+}
+
+@keyframes crown-sweep-shine {
+  0%, 75% { left: -100%; opacity: 0; }
+  85% { opacity: 1; }
+  100% { left: 200%; opacity: 0; }
+}
+
+@keyframes sparkle-blink {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+@media (max-width: 900px) {
+  .premium-crown-container {
+    font-size: 0.8em; /* Scales down to 80% */
+    top: -0.6em;
+    left: -0.1em;
+  }
+}
+
+@media (max-width: 560px) {
+  .premium-crown-container {
+    font-size: 0.65em; /* Scales down to ~65% */
+    top: -0.55em;
+    left: -0.15em;
+  }
+}
+
+/* ============================================================
    Floating WhatsApp Button
 ============================================================ */
 .floating-whatsapp {
