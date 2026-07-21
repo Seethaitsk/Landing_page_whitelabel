@@ -15,7 +15,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 
 <body>
@@ -51,7 +51,10 @@
                 </span>
                 <span class="brand-text">Golden&nbsp;Stake</span>
             </a>
-            <a href="#" class="nav-cta js-whatsapp">Start Your Platform</a>
+            <a href="#" class="nav-cta js-whatsapp">
+                <span style="position: relative; z-index: 2; font-weight: 800;">Start Your Platform</span>
+                <div class="cta-shine"></div>
+            </a>
         </div>
     </header>
 
@@ -108,43 +111,59 @@
 
                         <div class="hero-stats-premium" data-reveal>
                             <div class="hero-stat-card stat-anim" style="animation-delay: 0.2s;">
-                                <div class="stat-icon-wrapper">
-                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#svgGold)"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                                    </svg>
-                                </div>
-                                <div class="stat-content">
-                                    <span class="hero-stat-num">N$15,000</span>
+                                <div class="stat-top">
+                                    <div class="stat-icon-wrapper">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#svgGold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <ellipse cx="12" cy="5" rx="8" ry="3"/>
+                                            <path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/>
+                                            <path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/>
+                                        </svg>
+                                    </div>
                                     <span class="hero-stat-label">ONE-TIME SETUP</span>
+                                </div>
+                                <div class="stat-middle">
+                                    <span class="hero-stat-num">N$15,000</span>
+                                </div>
+                                <div class="stat-bottom">
+                                    <span class="hero-stat-desc">No hidden charges</span>
                                 </div>
                             </div>
 
                             <div class="hero-stat-card stat-anim" style="animation-delay: 0.4s;">
-                                <div class="stat-icon-wrapper">
-                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#svgGold)"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect x="2" y="5" width="20" height="14" rx="2" ry="2" />
-                                        <path d="M16 12h.01M2 10h20" />
-                                    </svg>
+                                <div class="stat-top">
+                                    <div class="stat-icon-wrapper green-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#00C851" stroke="none">
+                                            <polygon points="12 2 15 5 19 5 19 9 22 12 19 15 19 19 15 19 12 22 9 19 5 19 5 15 2 12 5 9 5 5 9 5 12 2"/>
+                                            <polyline points="9 12 11 14 15 9" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <span class="hero-stat-label">MONTHLY MAINTENANCE</span>
                                 </div>
-                                <div class="stat-content">
+                                <div class="stat-middle">
                                     <span class="hero-stat-num">N$0</span>
-                                    <span class="hero-stat-label">MONTHLY MAINT.</span>
+                                </div>
+                                <div class="stat-bottom">
+                                    <span class="hero-stat-desc">Absolutely FREE</span>
                                 </div>
                             </div>
 
                             <div class="hero-stat-card stat-anim" style="animation-delay: 0.6s;">
-                                <div class="stat-icon-wrapper">
-                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#svgGold)"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
-                                        <polyline points="16 7 22 7 22 13" />
-                                    </svg>
+                                <div class="stat-top">
+                                    <div class="stat-icon-wrapper blue-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#007BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect x="3" y="14" width="4" height="6" fill="#007BFF" stroke="none" />
+                                            <rect x="9" y="10" width="4" height="10" fill="#007BFF" stroke="none" />
+                                            <rect x="15" y="6" width="4" height="14" fill="#007BFF" stroke="none" />
+                                            <polyline points="3 14 9 10 15 6 21 2" stroke="#00FFFF" stroke-width="2" />
+                                        </svg>
+                                    </div>
+                                    <span class="hero-stat-label">REVENUE SHARE (GGR)</span>
                                 </div>
-                                <div class="stat-content">
+                                <div class="stat-middle">
                                     <span class="hero-stat-num">20%</span>
-                                    <span class="hero-stat-label">REV SHARE (GGR)</span>
+                                </div>
+                                <div class="stat-bottom">
+                                    <span class="hero-stat-desc">Transparent & Fair</span>
                                 </div>
                             </div>
                         </div>
