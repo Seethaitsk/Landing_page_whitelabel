@@ -358,7 +358,7 @@ ul {
   left: 0;
   right: 0;
   z-index: 50;
-  padding: 18px 24px;
+  padding: 15px;
   backdrop-filter: blur(10px);
   background: linear-gradient(to bottom, rgba(42, 0, 8, 0.9), rgba(42, 0, 8, 0));
 }
@@ -469,7 +469,7 @@ ul {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 150px 24px 100px;
+  padding: 110px 24px 100px;
   overflow: hidden;
 }
 
@@ -681,7 +681,7 @@ ul {
   border-top-color: rgba(255, 215, 0, 0.35);
   border-left-color: rgba(255, 215, 0, 0.35);
   border-radius: 16px;
-  padding: 24px 12px;
+  padding: 12px;
   backdrop-filter: blur(16px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 2px 20px rgba(255, 215, 0, 0.05);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -715,7 +715,7 @@ ul {
 
 .stat-top {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 8px;
@@ -726,17 +726,11 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 215, 0, 0.02));
-  border: 1px solid rgba(255, 215, 0, 0.3);
-  border-radius: 50%;
-  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.1), inset 0 2px 5px rgba(255, 215, 0, 0.2);
 }
 
 .stat-icon-wrapper svg {
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
 }
 
 .stat-middle {
@@ -754,7 +748,7 @@ ul {
 .hero-stat-num {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
   background: linear-gradient(to bottom, #FFF3B0, #D4AF37, #8A5A10);
   -webkit-background-clip: text;
   background-clip: text;
@@ -769,10 +763,11 @@ ul {
 .hero-stat-label {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
+  font-size: 0.55rem;
+  letter-spacing: 0.05em;
   color: #F0D060;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .hero-stat-desc {
@@ -2266,7 +2261,7 @@ ul {
 ============================================================ */
 .typewriter-line {
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
   font-weight: 800;
   line-height: 1.2;
   text-transform: uppercase;
@@ -2283,14 +2278,22 @@ ul {
 }
 
 @keyframes blink-cursor {
-  0%, 100% { border-color: #FFD700; }
-  50%      { border-color: transparent; }
+
+  0%,
+  100% {
+    border-color: #FFD700;
+  }
+
+  50% {
+    border-color: transparent;
+  }
 }
 
 @keyframes type-glow-pulse {
   0% {
     filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.4)) drop-shadow(0 0 15px rgba(255, 215, 0, 0.1));
   }
+
   100% {
     filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.8)) drop-shadow(0 0 25px rgba(255, 215, 0, 0.4));
   }

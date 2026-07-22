@@ -13,7 +13,7 @@
        Cycling typewriter — type, pause, erase, next
     ------------------------------------------------------------ */
     var typewriterEl = document.getElementById("heroTypewriter");
-    var phrases = ["Your Profit", "Your Success", "Your Brand"];
+    var phrases = ["Business In Namibia", "Your Business", "Your Success", "Your Brand", "Your Platform", "Low Investment", "High Returns"];
     var phraseIndex = 0;
     var charIndex = 0;
     var isErasing = false;
