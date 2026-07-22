@@ -720,7 +720,7 @@ ul {
     transparent
   );
 
-  border: 2px solid transparent;
+  border: 4px solid transparent;
   border-radius: 16px;
   
   background: 
@@ -812,12 +812,13 @@ ul {
 
 .hero-stat-label {
   font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 0.55rem;
+  font-weight: 900;
+  font-size: 0.7rem;
   letter-spacing: 0.05em;
-  color: #F0D060;
+  color: #FFF2B2;
   text-transform: uppercase;
   white-space: nowrap;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.4);
 }
 
 .hero-stat-desc {
@@ -2604,11 +2605,11 @@ ul {
   }
 
   .brand-logo {
-    height: 48px;
+    height: 40px; /* slightly smaller to fit better */
   }
 
   .brand-text {
-    font-size: 1rem;
+    display: none; /* Hide on mobile to prevent overlapping */
   }
 
   .coin-mark {
