@@ -10,6 +10,53 @@
     var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     /* ------------------------------------------------------------
+       Cycling typewriter — type, pause, erase, next
+    ------------------------------------------------------------ */
+    var typewriterEl = document.getElementById("heroTypewriter");
+    var phrases = ["Your Profit", "Your Success", "Your Brand"];
+    var phraseIndex = 0;
+    var charIndex = 0;
+    var isErasing = false;
+    var typeSpeed = 80;
+    var eraseSpeed = 50;
+    var pauseAfterType = 1800;
+    var pauseAfterErase = 400;
+
+    function typewriterTick() {
+        var current = phrases[phraseIndex];
+
+        if (!isErasing) {
+            // Typing
+            typewriterEl.textContent = current.substring(0, charIndex + 1);
+            charIndex++;
+
+            if (charIndex === current.length) {
+                // Done typing — pause then erase
+                isErasing = true;
+                setTimeout(typewriterTick, pauseAfterType);
+            } else {
+                setTimeout(typewriterTick, typeSpeed);
+            }
+        } else {
+            // Erasing
+            typewriterEl.textContent = current.substring(0, charIndex - 1);
+            charIndex--;
+
+            if (charIndex === 0) {
+                // Done erasing — move to next phrase
+                isErasing = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(typewriterTick, pauseAfterErase);
+            } else {
+                setTimeout(typewriterTick, eraseSpeed);
+            }
+        }
+    }
+
+    // Start after a short delay
+    setTimeout(typewriterTick, 1000);
+
+    /* ------------------------------------------------------------
        WhatsApp CTA wiring
     ------------------------------------------------------------ */
     function openWhatsApp(e) {
@@ -107,17 +154,17 @@
     /* ------------------------------------------------------------
        FAQ Accordion
     ------------------------------------------------------------ */
-    document.querySelectorAll('.faq-question').forEach(function(button) {
-        button.addEventListener('click', function() {
+    document.querySelectorAll('.faq-question').forEach(function (button) {
+        button.addEventListener('click', function () {
             var item = button.parentElement;
-            
+
             // Close other items
-            document.querySelectorAll('.faq-item').forEach(function(otherItem) {
-                if(otherItem !== item) {
+            document.querySelectorAll('.faq-item').forEach(function (otherItem) {
+                if (otherItem !== item) {
                     otherItem.classList.remove('active');
                 }
             });
-            
+
             // Toggle current item
             item.classList.toggle('active');
         });

@@ -132,7 +132,8 @@ ul {
   justify-content: center;
   font-family: var(--font-display);
   font-weight: 900;
-  color: #7A5200; /* Dark etched color for the N$ text */
+  color: #7A5200;
+  /* Dark etched color for the N$ text */
   background: radial-gradient(circle at 35% 30%, #FFDF70 0%, #D4AF37 45%, #996515 85%);
   border: 2px solid #F0D060;
   box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.4), 0 0 10px rgba(212, 175, 55, 0.6);
@@ -761,7 +762,7 @@ ul {
   -webkit-text-fill-color: transparent;
   display: inline-block;
   line-height: 1.1;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
   word-break: break-word;
 }
 
@@ -2261,59 +2262,38 @@ ul {
 }
 
 /* ============================================================
-   Animated Text Highlight — "BUSINESS IN NAMIBIA"
+   Hero Typewriter — cycle phrases with type/erase
 ============================================================ */
-.animated-text-fill {
-  position: relative;
+.typewriter-line {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   display: inline-block;
-  background: linear-gradient(
-    90deg,
-    #D4AF37 0%,
-    #FFF3B0 20%,
-    #FFDF00 40%,
-    #D4AF37 60%,
-    #FFF3B0 80%,
-    #D4AF37 100%
-  );
-  background-size: 200% 100%;
+  min-height: 1.3em;
+  background: linear-gradient(to bottom, #FFF3B0 0%, #D4AF37 50%, #8A5A10 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gold-shimmer 4s ease-in-out infinite, text-glow-pulse 3s ease-in-out infinite alternate;
+  border-right: 3px solid #FFD700;
+  animation: blink-cursor 0.7s step-end infinite, type-glow-pulse 2s ease-in-out infinite alternate;
+  padding-right: 4px;
 }
 
-@keyframes gold-shimmer {
-  0%   { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+@keyframes blink-cursor {
+  0%, 100% { border-color: #FFD700; }
+  50%      { border-color: transparent; }
 }
 
-@keyframes text-glow-pulse {
+@keyframes type-glow-pulse {
   0% {
-    filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.3)) drop-shadow(0 0 20px rgba(255, 215, 0, 0.1));
+    filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.4)) drop-shadow(0 0 15px rgba(255, 215, 0, 0.1));
   }
   100% {
-    filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.7)) drop-shadow(0 0 40px rgba(255, 215, 0, 0.3));
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.8)) drop-shadow(0 0 25px rgba(255, 215, 0, 0.4));
   }
-}
-
-/* Animated underline sweep */
-.animated-text-fill::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, transparent 0%, #FFD700 50%, transparent 100%);
-  background-size: 200% 100%;
-  animation: underline-sweep 3s ease-in-out infinite;
-  border-radius: 2px;
-}
-
-@keyframes underline-sweep {
-  0%   { background-position: 200% 0; opacity: 0.4; }
-  50%  { background-position: 0% 0; opacity: 1; }
-  100% { background-position: -200% 0; opacity: 0.4; }
 }
 
 /* ============================================================
