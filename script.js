@@ -4,7 +4,7 @@
     /* ------------------------------------------------------------
        Config — edit this number to your real WhatsApp business line
     ------------------------------------------------------------ */
-    var WHATSAPP_NUMBER = "91XXXXXXXXXX"; // replace with real number, digits only, country code first
+    var WHATSAPP_NUMBER = "264813278786"; // replace with real number, digits only, country code first
     var WHATSAPP_MESSAGE = "Hi! I'm interested in launching a gaming platform with Golden Stake. Please share more details.";
 
     var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -30,15 +30,17 @@
         function makeCoin() {
             var coin = document.createElement("div");
             coin.className = "coin";
+            coin.innerHTML = "N$";
             var left = Math.random() * 100;
-            var size = 10 + Math.random() * 14;
-            var duration = 7 + Math.random() * 6;
+            var size = 24 + Math.random() * 20;
+            var duration = 8 + Math.random() * 6;
             var spinDuration = 1.5 + Math.random() * 2;
             var delay = Math.random() * 2;
 
             coin.style.left = left + "%";
             coin.style.width = size + "px";
             coin.style.height = size + "px";
+            coin.style.fontSize = (size * 0.45) + "px";
             coin.style.animationDuration = duration + "s, " + spinDuration + "s";
             coin.style.animationDelay = delay + "s, 0s";
 
@@ -55,7 +57,7 @@
         window.setInterval(makeCoin, intervalMs / count);
     }
 
-    spawnCoins(document.getElementById("coin-field"), 6, 2600);
+    spawnCoins(document.getElementById("coin-field"), 2, 4000);
 
     var ctaCoinField = document.querySelector(".cta-coins");
     if (ctaCoinField) spawnCoins(ctaCoinField, 5, 2400);
